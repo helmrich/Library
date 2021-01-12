@@ -27,6 +27,11 @@ h1 {
     margin: 20px 0;
 }
 
+#logoSubtitle {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.25);
+}
+
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -35,6 +40,10 @@ h2 {
 
 p {
     text-align: justify;
+}
+
+b {
+    font-weight: 700;
 }
 
 #bookList {
@@ -56,11 +65,26 @@ p {
     margin-bottom: 0;
 }
 
-.book-card > p:first-of-type {
-    font-style: italic;
-    margin-top: 5px;
+.book-card > p {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.book-card > p {
-    white-space: nowrap;
+.book-card > p:first-of-type {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.add-book-card {
+    display: flex;
+    justify-content: center;
+    transition: all 0.1s;
+}
+
+.plus-icon {
+    width: 50px;
+}
+
+.add-book-card:hover {
+    box-shadow: 0 0 1px 1.5px rgb(0, 0, 0);
 }

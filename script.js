@@ -30,11 +30,25 @@ myLibrary.map(book => {
     const author = document.createElement("p");
     author.textContent = `by ${book.author}`;
     const numberOfPages = document.createElement("p");
-    numberOfPages.textContent = `Number of pages: ${book.numberOfPages} pages`;
+    const numberOfPagesLabel = document.createElement("b");
+    numberOfPagesLabel.textContent = "Number of pages: ";
+    numberOfPages.textContent = `${book.numberOfPages} pages`;
+    numberOfPages.prepend(numberOfPagesLabel);
     const status = document.createElement("p");
-    status.textContent = `Status: ${book.finishedReading ? "read" : "not read yet"}`;
+    const statusLabel = document.createElement("b");
+    statusLabel.textContent = "Status: ";
+    status.textContent = `${book.finishedReading ? "read" : "not read yet"}`;
+    status.prepend(statusLabel);
 
     bookArticle.append(heading, author, numberOfPages, status);
 
     document.getElementById("bookList").appendChild(bookArticle);
 });
+
+const addBookArticle = document.createElement("article");
+addBookArticle.classList.add("book-card", "add-book-card");
+const plusIcon = document.createElement("img");
+plusIcon.setAttribute("src", "plus-circle.svg");
+plusIcon.classList.add("plus-icon");
+addBookArticle.appendChild(plusIcon);
+document.getElementById("bookList").appendChild(addBookArticle);
