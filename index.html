@@ -20,6 +20,31 @@
         <h2>Your Books</h2>
         <section id="bookList"></section>
     </main>
+    <div id="bookInputModalContainer" class="hidden">
+        <div id="bookInputModal">
+            <div id="bookInputModalTop">
+                <h2>Add a new Book</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-x close-icon">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </div>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+            <label for="numberPages">Number of Pages</label>
+            <input type="number" name="numberPages" id="numberPages">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+                <option value="read">read</option>
+                <option value="notYetRead">not yet read</option>
+            </select>
+            <input type="button" value="Add">
+        </div>
+    </div>
 </body>
 
 </html>

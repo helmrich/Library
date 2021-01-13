@@ -9,12 +9,11 @@ html {
 }
 
 body {
-    display: grid;
     margin-top: 20px;
     margin-bottom: 0px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 792px) {
     body {
         margin-left: 200px;
         margin-right: 200px;
@@ -44,6 +43,36 @@ p {
 
 b {
     font-weight: 700;
+}
+
+input, select, option {
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    color: black;
+    background-color: white;
+    transition: all 0.1s;
+}
+
+input[type="button"]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    box-shadow: 0 0 0 1px rgb(0, 0, 0);
+}
+
+select, option {
+    background-color: white;
+    appearance: none;
 }
 
 #bookList {
@@ -82,9 +111,81 @@ b {
 }
 
 .plus-icon {
-    width: 50px;
+    width: 60px;
+    transition: all 0.1s;
 }
 
 .add-book-card:hover {
-    box-shadow: 0 0 1px 1.5px rgb(0, 0, 0);
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.add-book-card:hover .plus-icon {
+    stroke-width: 1px;
+}
+
+
+/* Book Input Modal */
+
+#bookInputModalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#bookInputModal {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+#bookInputModal label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#bookInputModal input[type="button"] {
+    margin-top: 20px;
+}
+
+#bookInputModal h2 {
+    margin: 0;
+    font-weight: 900;
+}
+
+#bookInputModalTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.close-icon {
+    width: 40px;
+    stroke-width: 2px;
+}
+
+.close-icon:hover {
+    stroke-width: 3px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+    #bookInputModal {
+        width: 790px;
+    }
+}
+
+.hidden {
+    display: none !important;
 }
