@@ -31,18 +31,20 @@
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </div>
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title">
-            <label for="author">Author</label>
-            <input type="text" name="author" id="author">
-            <label for="numberPages">Number of Pages</label>
-            <input type="number" name="numberPages" id="numberPages">
-            <label for="status">Status</label>
-            <select name="status" id="status">
-                <option value="read">read</option>
-                <option value="notYetRead">not yet read</option>
-            </select>
-            <input type="button" value="Add">
+            <form>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+                <label for="numberPages">Number of Pages</label>
+                <input type="number" name="pageNumber" id="pageNumber" required>
+                <label for="status">Status</label>
+                <select name="status" id="status" required>
+                    <option value="read">read</option>
+                    <option value="not yet read">not yet read</option>
+                </select>
+                <input type="submit" value="Add">
+            </form>
         </div>
     </div>
 </body>
