@@ -53,13 +53,15 @@ input, select, option {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="button"]:hover {
     color: black;
     background-color: white;
     transition: all 0.1s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+input[type="button"]:hover {
     color: white;
     background-color: black;
     cursor: pointer;
@@ -94,7 +96,23 @@ select, option {
     padding: 25px;
 }
 
+.book-card > .book-remove-icon-container {
+    display: flex;
+    justify-content: right;
+}
+
+.book-card > .book-remove-icon-container > .book-remove-icon {
+    width: 30px;
+    transition: all 0.1s;
+}
+
+.book-card > .book-remove-icon-container > .book-remove-icon:hover {
+    stroke-width: 3px;
+    cursor: pointer;
+}
+
 .book-card > h3 {
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -106,6 +124,14 @@ select, option {
 .book-card > p:first-of-type {
     font-style: italic;
     margin-bottom: 15px;
+}
+
+.status-button {
+    background-color: white;
+    color: black;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 5px;
 }
 
 .add-book-card {
@@ -180,6 +206,7 @@ select, option {
 .close-icon {
     width: 40px;
     stroke-width: 2px;
+    transition: all 0.1s;
 }
 
 .close-icon:hover {
