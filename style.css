@@ -98,7 +98,7 @@ select, option {
 
 .book-card > .book-remove-icon-container {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 .book-card > .book-remove-icon-container > .book-remove-icon {
