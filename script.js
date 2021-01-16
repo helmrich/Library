@@ -1,5 +1,4 @@
 let myLibrary = [];
-// localStorage.removeItem("bookLibrary");
 setupLocalStorage();
 
 // Book Constructor
@@ -69,9 +68,6 @@ function createBookCard(book) {
     bookRemoveIconContainer.innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x book-remove-icon"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
     bookRemoveIconContainer.querySelector(".book-remove-icon")
         .addEventListener("click", (_) => {
-            // Get the closest parent that is an article, thus the book article
-            // const bookArticleToRemove = e.target.closest("article");
-
             // Maybe better way: Remove the book card that is being created now
             const bookArticleToRemove = bookCard;
 
@@ -96,15 +92,9 @@ function createBookCard(book) {
     pageNumber.prepend(pageNumberLabel);
 
     // Status
-    // const status = document.createElement("p");
+    const statusContainer = document.createElement("div");
     const statusLabel = document.createElement("b");
     statusLabel.textContent = "Status: ";
-
-    // status.textContent = `${book.finishedReading ? "read" : "not read yet"}`;
-
-    // status.prepend(statusLabel);
-
-    const statusContainer = document.createElement("div");
     const statusButton = document.createElement("input");
     statusButton.type = "button";
     statusButton.classList.add("status-button");
@@ -117,7 +107,6 @@ function createBookCard(book) {
     });
     statusContainer.append(statusLabel, statusButton);
 
-    // bookCard.append(bookRemoveIconContainer, heading, author, pageNumber, status);
     bookCard.append(bookRemoveIconContainer, heading, author, pageNumber, statusContainer);
     return bookCard;
 }
